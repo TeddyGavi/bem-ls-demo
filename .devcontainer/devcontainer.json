@@ -1,9 +1,9 @@
 {
   "name": "bem-ls demo",
-  "image": "mcr.microsoft.com/devcontainers/go:1-1.24-bookworm",
+  "image": "mcr.microsoft.com/devcontainers/go:1-1.27-bookworm",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "22"
+      "version": "24"
     }
   },
   "postCreateCommand": "bash .devcontainer/setup.sh",
@@ -14,6 +14,7 @@
       ]
     }
   },
+  postCreateCommand: "go version",
   "forwardPorts": [],
   "remoteUser": "vscode"
 }
