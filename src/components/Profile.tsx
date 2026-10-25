@@ -4,11 +4,11 @@ import clsx from 'clsx';
 import s from './Profile.module.scss';
 import './Profile.scss';
 
-const Wrapper = styled.section<{ compact?: boolean }>`
-  padding: ${(p) => (p.compact ? '0.5rem' : '1rem')};
+const Wrapper = styled.section<{ $compact?: boolean }>`
+  padding: ${(p) => (p.$compact ? '0.5rem' : '1rem')};
 
   ${(p) =>
-    p.compact &&
+    p.$compact &&
     css`
       border: 0;
     `}
@@ -32,7 +32,7 @@ type ProfileProps = {
 export function Profile({ user, compact }: ProfileProps) {
   return (
     <Wrapper
-      compact={compact}
+      $compact={compact}
       className="profile"
     >
       <img

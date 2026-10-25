@@ -29,7 +29,7 @@ type ProfileProps = {
   compact?: boolean;
 };
 
-export function Profile({ user, compact }: ProfileProps) {
+export function Profile({ user, compact = false }: ProfileProps) {
   return (
     <Wrapper
       compact={compact}
